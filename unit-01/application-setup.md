@@ -22,5 +22,9 @@ When asked if you should include routing, type 'y' for yes and press enter
 ```
 ? Would you like to add Angular routing? (y/N)
 ```
+When asked what stylesheet format you would like to include, select 'SCSS'
+```
+? Which stylesheet format would you like to use? (Use arrow keys)
+```
 
 This will create a directory named hr-timesheet, generate all of the app files and place them in there, and download all of the dependencies specified by Angular CLI. You're free to install more as your project needs them. The above command may take a minute or more, depending on your environment and internet connection speed.
