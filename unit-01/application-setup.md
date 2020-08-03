@@ -53,10 +53,8 @@ When asked what prebuilt theme name to use, stick with `Indigo/Pink`
 ```Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow keys)
 
 ❯ Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ] 
-  Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amb
-er ] 
-  Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey 
-] 
+  Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amber ] 
+  Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ] 
   Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ]
  
 (Move up and down to reveal more choices)
@@ -71,3 +69,7 @@ When asked if you want to set up browser animations for Angular Material, enter 
 ```
 Set up browser animations for Angular Material?
 ```
+
+By going through this Angular Material setup, you should now have new dependencies installed into your application and your package.json file should be updated to include `@angular/material`.
+
+![package.json](img/angular_material.png)
