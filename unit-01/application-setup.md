@@ -67,9 +67,18 @@ Set up global Angular Material typography styles? (y/N)
 
 When asked if you want to set up browser animations for Angular Material, enter `Y` for yes.
 ```
-Set up browser animations for Angular Material?
+Set up browser animations for Angular Material? (Y/n)
 ```
 
 By going through this Angular Material setup, you should now have new dependencies installed into your application and your package.json file should be updated to include `@angular/material`.
 
 ![package.json](img/angular_material.png)
+
+## Adjust and create modules
+
+Aside from our root `app.module.ts` file, we want to keep all of our other current and future modules in a separate `modules` folder. This will help with organization throughout this application.
+
+The only module file that we currently need to move is our `app.routing.module.ts` file. Move this file into your `modules` directory. If your server is currently running, you will see a whole host of errors. To resolve these errors (do this if you're not seeing errors as well), go to your `app.module.ts` file and update the `AppRoutingModule` import so that the path now shows that the `AppRoutingModule` is located in the `modules` directory:
+```
+import { AppRoutingModule } from './modules/app-routing.module';
+```
