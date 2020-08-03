@@ -20,11 +20,11 @@ ng new hr-timesheet
 
 When asked if you should include routing, type 'y' for yes and press enter
 ```
-? Would you like to add Angular routing? (y/N)
+Would you like to add Angular routing? (y/N)
 ```
 When asked what stylesheet format you would like to include, select `SCSS`
 ```
-? Which stylesheet format would you like to use? (Use arrow keys)
+Which stylesheet format would you like to use? (Use arrow keys)
   CSS 
 ❯ SCSS   [ https://sass-lang.com/documentation/syntax#scss                ] 
   Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ] 
@@ -33,3 +33,9 @@ When asked what stylesheet format you would like to include, select `SCSS`
 ```
 
 This will create a directory named hr-timesheet, generate all of the app files and place them in there, and download all of the dependencies specified by Angular CLI. You're free to install more as your project needs them. The above command may take a minute or more, depending on your environment and internet connection speed.
+
+## Create additional folders
+
+Next we will create four additional folders under the `src/app`. The four folders will be called `components`, `interfaces`, `modules`, and `services`.
+
+![Folder Structure](img/folder_structure.png)
