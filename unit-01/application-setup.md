@@ -34,8 +34,40 @@ Which stylesheet format would you like to use? (Use arrow keys)
 
 This will create a directory named hr-timesheet, generate all of the app files and place them in there, and download all of the dependencies specified by Angular CLI. You're free to install more as your project needs them. The above command may take a minute or more, depending on your environment and internet connection speed.
 
-## Create additional folders
+## Create additional directories
 
-Next we will create four additional folders under the `src/app`. The four folders will be called `components`, `interfaces`, `modules`, and `services`.
+Next we will create four additional directories within the `src/app` directory. The four directories will be called `components`, `interfaces`, `modules`, and `services`.
 
-![Folder Structure](img/folder_structure.png)
+![Directory Structure](img/folder_structure.png)
+
+## Add Angular Material
+
+Angular Material is a UI component library for Angular developers. Angular Material components help in constructing attractive, consistent, and functional web pages and web applications while adhering to modern web design principles like browser portability, device independence, and graceful degradation.
+
+To include Angular Material in your application, use the following command:
+```
+ng add @angular/material
+```
+
+When asked what prebuilt theme name to use, stick with `Indigo/Pink`
+```Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow keys)
+
+❯ Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ] 
+  Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amb
+er ] 
+  Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey 
+] 
+  Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ]
+ 
+(Move up and down to reveal more choices)
+``` 
+
+When asked if you want to set up global Angular Material typography styles, enter `y` for yes.
+```
+Set up global Angular Material typography styles? (y/N) 
+```
+
+When asked if you want to set up browser animations for Angular Material, enter `Y` for yes.
+```
+Set up browser animations for Angular Material?
+```
