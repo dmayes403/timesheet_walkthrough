@@ -15,7 +15,7 @@ We need to do a few additional steps to have access to the `toolbar` component.
 1. Create a `exports` array below the `imports` array in the `angular.module.ts` file.
 2. Paste `MatToolbarModule` into the `exports` array that you just created.
 
-![MatToolbarModule export](img/toolbar_import.png)
+![MatToolbarModule export](img/toolbar_export.png)
 
 By placing `MatToolbarModule` into the exports array, it allows us to import the `MaterialModule` as a whole into a different module and it will include all of the imports of the `MaterialModule` into the new parent module.
 
