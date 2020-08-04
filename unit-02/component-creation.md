@@ -20,6 +20,11 @@ Create a top-navbar component using the command `ng g c components/top-navbar`.
 
 Create an analytics-table component using the command `ng g c components/analytics-table`.
 
+
+### Acceptance Test
+
 Your component file structure should look like the image below.
 
 ![Component Structure](img/component_structure.png)
+
+We will add content to the templates of each of these components in later units
