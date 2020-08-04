@@ -91,3 +91,5 @@ ng g module modules/material
 In the command above, the `g` stands for generate. By using that command, we have created a custom module called `material` and stored it within the `modules` directory. The only other step that we want to do here is pull the `material` module out of the nested directory that was also created with that module that module file itself is on the same level as the `AppRoutingModule`. After moving your `material` module out of the nested directory, your current directory/file structure should look like the image below.
 
 ![Module Structure](img/structure_w_material.png)
+
+Run the command `ng serve` to ensure that your project will start without errors.
