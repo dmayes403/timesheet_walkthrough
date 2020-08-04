@@ -2,7 +2,9 @@
 
 ## Introduction
 
-To help with navigation later in our app, we should add a navbar that can always be accessed from the top of the application. During unit-01 we added Angular Material. In today's content, we will make use of Angular Material and use the prebuilt `toolbar` component. In order for us to have access to the `toolbar` component, we must import it into our application, more specifically a module. We will import it into our `angular.module.ts` module. 
+To help with navigation later in our app, we should add a navbar that can always be accessed from the top of the application. During unit-01 we added Angular Material. In today's content, we will make use of Angular Material and use the prebuilt `toolbar` component. In order for us to have access to the `toolbar` component, we must import it into our application, more specifically a module. We will import it into our `angular.module.ts` module.
+
+## Importing MatToolbarModule
 
 Go to `https://material.angular.io/components/toolbar/overview` to see the component that we will be importing into our project. After you have gone to this page, click the `API` tab to have access to the import that we will be using.
 
@@ -28,4 +30,8 @@ Next, add `MaterialModule` into the `imports` array of your `app.module.ts` file
 Your `app.module.ts` file should look like the image below:
 
 ![MaterialModule imported](img/material_module.png)
+
+## Acceptance Test
+
+Run `ng serve` to ensure that your application will build without errors.
 
