@@ -21,7 +21,7 @@ const routes: Routes = [
 
 Remember, in the code that we just pasted, `{ path: '',   redirectTo: 'departments', pathMatch: 'full' }` is saying that when we first come to the root path of localhost:4200, we want the user to be redirected to the `departments` path so that the `DepartmentsComponent` will be displayed. All of the other paths will be loaded as we direct the user to them by other ways.
 
-To make it so that the router works, we need to add `<router-outlet style="height: 100%;"></router-outlet> to our` to the `app.component.html` file.
+To make it so that the router works, we need to add `<router-outlet style="height: 100%;"></router-outlet>` to the `app.component.html` file.
 
 Your `app.component.html` file should look like the image below.
 
