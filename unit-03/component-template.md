@@ -44,6 +44,6 @@ See those imports here
 `https://material.angular.io/components/icon/api`
 
 Your `material.module.ts` file should now look like this:
-!(img/button_icon_imports.png)
+![](img/button_icon_imports.png)
 
 
