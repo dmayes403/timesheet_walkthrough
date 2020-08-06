@@ -25,6 +25,6 @@ To make it so that the router works, we need to add `<router-outlet style="heigh
 
 Your `app.component.html` file should look like the image below.
 
-![](img/material_module.png)
+![](img/router_outlet.png)
 
 
