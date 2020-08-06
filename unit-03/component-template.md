@@ -44,6 +44,51 @@ See those imports here
 `https://material.angular.io/components/icon/api`
 
 Your `material.module.ts` file should now look like this:
+
 ![](img/button_icon_imports.png)
+
+We now have access to `mat-toolbar`, `mat-button`, and `mat-icon` components. Paste the below code into your `top-navbar.component.html` file
+
+```
+<mat-toolbar>
+    <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+    </button>
+
+    <div>Analytics</div>
+</mat-toolbar>
+```
+
+We also need to style this component so that it fits well in our component. Paste the below code into your `top-navbar.component.scss` file
+
+```
+.material-icons {
+    font-size: 35px;
+}
+
+mat-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.mat-icon-button i, .mat-icon-button .mat-icon {
+    line-height: 35px;
+}
+
+div {
+    margin-left: 10px;
+    cursor: pointer;
+}
+```
+
+Lastly, let's include the `TopNavbarComponent` in the main `AppComponent` so that it can be seen from every page that we navigate to. Paste the below code into your `app.component.html` file
+
+```
+<div style="height: 100%;">
+    <app-top-navbar></app-top-navbar>
+</div>
+```
+
+Run `ng serve` to make sure that your app will start without any errors.
 
 
