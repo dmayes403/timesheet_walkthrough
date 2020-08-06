@@ -35,3 +35,15 @@ Your `app.module.ts` file should look like the image below:
 
 Run `ng serve` to ensure that your application will build without errors.
 
+## Import MatButtonModule and MatIconModule
+
+In our top navbar we will also be including an icon that is placed within a button. In order for us to do that, we will need to follow the same pattern as we did importing the `MatToolBarModule`, but this time we will import both the `MatIconModule` and `MatButtonModule`.
+
+See those imports here:
+`https://material.angular.io/components/button/api`
+`https://material.angular.io/components/icon/api`
+
+Your `material.module.ts` file should now look like this:
+(img/button_icon_imports.png)
+
+
