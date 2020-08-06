@@ -91,4 +91,12 @@ Lastly, let's include the `TopNavbarComponent` in the main `AppComponent` so tha
 
 Run `ng serve` to make sure that your app will start without any errors.
 
+## Acceptance Test
+
+Load the app in the browser (localhost:4200) to see if you can view the navbar at the top of the page.
+
+Your browser should look like the image below.
+
+![](img/navbar.png)
+
 
