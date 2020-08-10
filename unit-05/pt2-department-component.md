@@ -40,6 +40,9 @@ Now that we have set the `departments` variable within the `DepartmentsComponent
 </div>
 ```
 
+![](img/departments_html.png)
+
+
 Run `ng serve` and see if your app runs without errors.
 
 At this point you should see multiple errors logging in your terminal. A couple of them should relate to `mat-card` and `mat-list`. That is because both `mat-card` and `mat-list` are Angular Material compnents that require imports into our `material.module.ts` module.
