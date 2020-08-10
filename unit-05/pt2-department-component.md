@@ -15,3 +15,13 @@ The next step before we can try and display the departments using HTML would be 
 1. Create the departments variable in the `deparments.component.ts` file. `departments: Department[];`, don't forget the import at the top of your `departments.component.ts` file.
 
 ![](img/department_comp_variable.png)
+
+2. Within the `ngOnInit` life cycle hook of the `DepartmentsComponent`, set the `deparments` variable equal to the `departments` variable from the `DepartmentsService`.
+
+```
+ngOnInit(): void {
+    this.departments = this.departmentsService.departments;
+}
+```
+
+![](img/set_departments.png)
