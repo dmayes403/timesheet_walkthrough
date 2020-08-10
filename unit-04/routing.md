@@ -54,7 +54,7 @@ Notice in the above code that we have provided two different `routerLink` direct
 
 Your `top-navbar.html` file should now look like the image below.
 
-![](img/routerink.png)
+![](img/routerlink.png)
 
 ## Acceptance Test
 
