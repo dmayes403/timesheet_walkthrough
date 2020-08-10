@@ -10,10 +10,26 @@ To achieve the list of departments like in the image above. We want to retrieve 
 
 Let's create a `departments` service using the CLI. Use the command `ng g s services/departments`. This command will generate a service called `departments` within the `services` folder.
 
-Now that we have a `departments` service created, let's create a `departments` variable and populate it with data that can be accessed from any component that injects the `departments` service into it.
+![](img/service_file.png)
+
+Now that we have a `departments` service created, let's create a `departments` variable within the departments service and populate it with data that can be accessed from any component that injects the `departments` service into it. We will do this shortly.
 
 Whenever we are creating variables, we want to define the type of that variable using an `interface`. This helps add type safety throughout the application so that we don't have conflicts with the data that we are handling. Let's create an `interface` for a `department`. Use the CLI command `ng g i interfaces/department`, this will create a `department` interface within the `interfaces folder.
 
 The newly created interface should be mostly empty and should look like the image below.
 
 ![](img/empty_department_interface.png)
+
+Let's add properties and define their types within the `department` interface. Override the current code that's in the `department.ts` (interface) file with the code below.
+
+```
+export interface Department {
+    id: string;
+    name: string;
+}
+```
+
+This defines the properties on the `Department` interface, an `id` property and a `name` property which both have a type of `string`. Your `Department` interface file should now look like this.
+
+![](img/department_i_completed.png)
+
