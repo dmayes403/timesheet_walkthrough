@@ -1,4 +1,4 @@
-# Service Injection and Departments Component Creation
+# Service Creation and Data Population
 
 ## Introduction
 
@@ -43,7 +43,10 @@ departments: Department[] = [
 ];
 ```
 
-Don't forget to import the department interface into the file as well. Your `departments.service.ts` file should look like the image below.
+Don't forget to import the department interface into the `department.service.ts` file as well. Your `departments.service.ts` file should look like the image below.
 
 ![](img/department_variable.png)
 
+## Acceptance Test
+
+Run `ng serve` and make sure that your application start without errors.
