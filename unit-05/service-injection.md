@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When we finish the deparments component, we want it to look like the image below.
+When we finish the departments component, we want it to look like the image below.
 
 ![](img/departments_layout.png)
 
@@ -16,4 +16,4 @@ Whenever we are creating variables, we want to define the type of that variable 
 
 The newly created interface should be mostly empty and should look like the image below.
 
-![](img/empty_department.png)
+![](img/empty_department_interface.png)
