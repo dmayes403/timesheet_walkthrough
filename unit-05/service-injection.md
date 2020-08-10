@@ -33,3 +33,17 @@ This defines the properties on the `Department` interface, an `id` property and 
 
 ![](img/department_i_completed.png)
 
+Now that we've created the `Department` interface and defined the properties that exist on it, we can create the `departments` variable within the departments service. The variable will be of type `Department` and it will be an array. Your variable with definition should look like `departments: Department[]`. Let's take it one step further and populate it with data. Paste the below code into your `departments.service.ts` file.
+
+```
+departments: Department[] = [
+    {id: '1', name: 'Customer Success'},
+    {id: '2', name: 'Sales'},
+    {id: '3', name: 'Finance'},
+];
+```
+
+Don't forget to import the department interface into the file as well. Your `departments.service.ts` file should look like the image below.
+
+![](img/department_variable.png)
+
