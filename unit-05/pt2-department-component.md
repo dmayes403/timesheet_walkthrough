@@ -98,4 +98,4 @@ Finally, we added some styling to the `department.component.scss` file so that t
 
 ## Acceptance Test
 
-When you route to `localhost:4200/departments` you should see a list of three different departments. If you hover over one of the departments, it should turn gray.
+When you navigate to `localhost:4200/departments` you should see a list of three different departments. If you hover over one of the departments, it should turn gray.
