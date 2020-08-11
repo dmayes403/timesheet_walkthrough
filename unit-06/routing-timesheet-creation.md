@@ -38,11 +38,21 @@ Once you have the `goToDepartment()` function and the `(click)` event added to y
 
 ## Display Department Depending on Route Param
 
-Sense we now have additional information in the form of a param that is attached to the URL, our next goal is to display the department name associated with that param `id` once we get to the `TimesheetComponent` route.
+Sense we now have additional information in the form of a param that is attached to the URL, our next goal is to display the department name associated with that param `id` once we get to the `TimesheetComponent` route. See the next image for what we are trying to accomplish.
+
+![](img/department_title.png)
+
 
 The Angular Router provides additional methods and information about a route when we inject `ActivatedRoute` into the constructor of a component. In this case we will be injecting `ActivatedRoute` into the `TimesheetComponent`.
 
-Don't forget the `ActivatedRoute` import at the top of the component.
+Don't forget the `import { ActivatedRoute } from '@angular/router';` import at the top of the component.
 
 ![](img/activated_route.png)
+
+In order for us to display the correct department name at the top of the `timesheet` page, we need to first retrieve the list of departments from our `DepartmentsService` and store them in a variable within our `TimesheetComponent`
+
+Inject the `DepartmentsService` into your `TimesheetComponent` constructor and create a `departments: Department[];` variable. See the image below for what your `timesheet.component.ts` file should currently look like. Don't forget the `DepartmentsService` and `Department` imports at the top of the component.
+
+![](img/service_in_timesheet.png)
+
 
