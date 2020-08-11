@@ -1,7 +1,7 @@
 # Application Setup
 
 ## Application Introduction
-Over the next several days we will be creating a application from scratch that will resemble something that a human resource would use to enter the hours for each employee who is working under a certain department. This application will consist of three main pages: A department selection page, a timesheet entry page, and an analysis page.
+Over the next several days we will be creating an application from scratch that will resemble something that a human resource employee could use to enter the hours for each employee who is working under a certain department. This application will consist of three main pages: A department selection page, a timesheet entry page, and an analysis page.
 
 ![Department Selection](img/departments_final.png)
 ![Timesheet Entry](img/timesheet_final.png)
