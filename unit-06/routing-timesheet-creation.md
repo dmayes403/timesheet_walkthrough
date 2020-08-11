@@ -38,3 +38,11 @@ Once you have the `goToDepartment()` function and the `(click)` event added to y
 
 ## Display Department Depending on Route Param
 
+Sense we now have additional information in the form of a param that is attached to the URL, our next goal is to display the department name associated with that param `id` once we get to the `TimesheetComponent` route.
+
+The Angular Router provides additional methods and information about a route when we inject `ActivatedRoute` into the constructor of a component. In this case we will be injecting `ActivatedRoute` into the `TimesheetComponent`.
+
+Don't forget the `ActivatedRoute` import at the top of the component.
+
+![](img/activated_route.png)
+
