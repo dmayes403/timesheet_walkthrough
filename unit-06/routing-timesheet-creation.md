@@ -36,7 +36,7 @@ Once you have the `goToDepartment()` function and the `(click)` event added to y
 ![](img/url_param.png)
 
 
-## Display Department Depending on Route Param
+## Find the department that matches the id param
 
 Sense we now have additional information in the form of a param that is attached to the URL, our next goal is to display the department name associated with that param `id` once we get to the `TimesheetComponent` route. See the next image for what we are trying to accomplish.
 
@@ -49,10 +49,90 @@ Don't forget the `import { ActivatedRoute } from '@angular/router';` import at t
 
 ![](img/activated_route.png)
 
-In order for us to display the correct department name at the top of the `timesheet` page, we need to first retrieve the list of departments from our `DepartmentsService` and store them in a variable within our `TimesheetComponent`
+In order for us to display the correct department name at the top of the `timesheet` page, we need to first retrieve the list of departments from our `DepartmentsService` and store them in a variable within our `TimesheetComponent`. With that data we will be able to find the correct department to match the `id` param in the URL.
 
-Inject the `DepartmentsService` into your `TimesheetComponent` constructor and create a `departments: Department[];` variable. See the image below for what your `timesheet.component.ts` file should currently look like. Don't forget the `DepartmentsService` and `Department` imports at the top of the component.
+Inject the `DepartmentsService` into your `TimesheetComponent` constructor and create two variables, a `departments: Department[];` variable and a `department: Department;`. See the image below for what your `timesheet.component.ts` file should currently look like. Don't forget the `DepartmentsService` and `Department` imports at the top of the component.
 
 ![](img/service_in_timesheet.png)
+
+Next replace the `ngOnInit` code that is within the `timesheet.component.ts` file with the code below.
+
+```
+ngOnInit(): void {
+    this.departments = this.departmentsService.departments;
+    this.department = this.departments.find(department => department.id === this.route.snapshot.params['id']);
+}
+```
+
+![](img/find_department.png)
+
+Within the `ngOnInit` we are first setting the `departments` variable equal to the list of departments from our `DepartmentsService`. After we have done that, we perform a `.find()` and look for the department within the `departments` variable where the `id` of the department matches the `id` paramater from the current route. `route` in this case is the `ActivatedRoute` that we injected into the `TimesheetComponent`. On the `ActivatedRoute` we are provided with a `snapshot` that gives us all kinds of information about the current route. We care specifically about the `params` property which holds the `id` that we attached to it from the previous `departments` route. Once the `.find()` method finds the department that has an `id` that matches the activated route `id` param, we set the `department` variable equal to that value.
+
+Once the `department` variable has been set within the `timesheet.component.ts`, we can display information about that department in the `timesheet.component.html` file using interpolation. Let's do that next.
+
+## Acceptance Test
+
+Make sure that when you run `ng serve`, that you don't have any errors up to this point.
+
+
+## Display Department Depending on Route Param
+
+Paste the below code into your `timesheet.component.html` file.
+
+```
+<div class="main-container">
+    <div class="cards">
+        <h2>{{department.name}}</h2>
+    </div>
+</div>
+```
+
+You should see that when you navigate between clicking a department, the house icon, and a different department, that the title in the view changes.
+
+Let's add a little bit of styling to center the content. Notice that there is a `main-container` class on the parent div. We are going to add styling for that class within the `styles.scss` file. We're doing it in the `styles.scss` file rather than the component file, because we want it to be applied to multiple components.
+
+Add this styling below the `body` styling in the `styles.scss` file.
+
+```
+.main-container {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 64px);
+}
+```
+
+![](img/main_container_class.png)
+
+While we're at it, let's add the `main-container` class onto the parent `div` of the `departments.component.html` file as well.
+
+![](img/departments_main_container.png)
+
+There is one more piece of styling that we need to add to the `timesheet.component.scss` file to get the header to be centered horizontally. Add the style below to the `timesheet.component.scss` file.
+
+```
+h2 {
+    text-align: center;
+}
+
+.cards {
+    margin: auto;
+}
+```
+
+![](img/center_header_styling.png)
+
+
+## Acceptance Test
+
+With all of the new styling added, the `departments` and `timesheet` pages should look like the images below.
+
+![](img/departments_centered.png)
+
+![](img/timesheet_centered.png)
+
+
+
+
+
 
 
