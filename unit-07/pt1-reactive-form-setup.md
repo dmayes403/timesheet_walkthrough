@@ -1,4 +1,4 @@
-# Reactive Form Controls and Custom Validation
+# Reactive Form Control Setup
 
 ## Introduction
 During the creation of this application, we will be using both reactive forms and template driven forms. Today we will be focusing a single input using a reactive form control and how to also apply custom validation on the input.
