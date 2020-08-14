@@ -89,7 +89,7 @@ Paste the below code into your `timesheet.component.html` file.
 
 You should see that when you navigate between clicking a department, the house icon, and a different department, that the title in the view changes.
 
-Let's add a little bit of styling to center the content. Notice that there is a `main-container` class on the parent div. We are going to add styling for that class within the `styles.scss` file. We're doing it in the `styles.scss` file rather than the component file, because we want it to be applied to multiple components.
+Let's add a little bit of styling to center the content. Notice that there is a `main-container` class on the parent div. We are going to add styling for that class within the `styles.scss` file. We're doing it in the `styles.scss` file rather than the component scss file, because we want it to be applied to multiple components.
 
 Add this styling below the `body` styling in the `styles.scss` file.
 
