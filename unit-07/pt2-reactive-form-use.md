@@ -79,7 +79,7 @@ We will go deeper into Angular Pipes in the future, but all this is doing is tak
 
 ## Acceptance Test
 
-Start the application using `ng serve`. Select a department and add an employee. You should see data start to populate in the UI.
+Start the application using `ng serve`. Select a department and add an employee. You should see data start to populate in the UI. Also try entering an employee under different departments and see if you notice the `departmentId` on the employee object change.
 
 ![](img/json_data.png)
 
