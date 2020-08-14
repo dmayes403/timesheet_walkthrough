@@ -80,3 +80,6 @@ We will go deeper into Angular Pipes in the future, but all this is doing is tak
 ## Acceptance Test
 
 Start the application using `ng serve`. Select a department and add an employee. You should see data start to populate in the UI.
+
+![](img/json_data.png)
+
