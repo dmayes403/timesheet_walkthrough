@@ -151,6 +151,11 @@ Lastly for this snippet of code, we have a `class="hours-input"`, but no actual 
 ![](img/table_style_update.png)
 
 
+## Acceptance Test
+
+At this point, run `ng serve` and navigate to the `./timesheet` route by selecting a department. After adding an employee or two, your page should look almost identical to the image below.
+
+![](img/multi_user.png)
 
 
 
