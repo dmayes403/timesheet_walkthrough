@@ -3,7 +3,9 @@
 ## Objectives
 In this section we will be creating a function that allows us to sum the total hours entered for an employee and we will also create the functionality to remove a user that has been added.
 
-In the `timesheet.component.ts` file added the following code below the `nameValidator()` custom validator that we previously created.
+## Totaling Hours
+
+First, let's provide a way to total all of the hours entered per employee. In the `timesheet.component.ts` file added the following code below the `nameValidator()` custom validator that we previously created.
 
 ```
 getTotalHours(employee: Employee): number {
@@ -39,3 +41,65 @@ Run `ng serve` to start your server. Once your app is running, add an employee a
 
 ![](img/total_hours_UI.png)
 
+
+## Removing Users
+
+Now that we have provided a way to total the hours for each employee, let's provide the functionality to remove a user who has been added. In the `timesheet.component.ts` file add the following code below the `getTotalHours()` function.
+
+```
+deleteEmployee(index: number): void {
+    this.employees.splice(index, 1);
+}
+```
+
+![](img/delete_employee.png)
+
+
+The `deleteEmployee(index: number)` function accepts an `index` parameter which is of type `number`. With the passed in parameter we will remove the employee from the list of employees (`employees` variable), using `splice`.
+
+To make this function properly, let's add a trash can icon in a new column furthest to the right, so that when the user clicks the icon, the employee is removed.
+
+Add the following html directly below the last existing `<td>` element in the `timesheet.component.html` file.
+
+```
+<td>
+    <button mat-icon-button (click)="deleteEmployee(i)">
+        <mat-icon>delete</mat-icon>
+    </button>
+</td>
+```
+
+![](img/delete_html.png)
+
+To wrap up this section, let's add some styling to `styles.scss` file to add some dividers between rows, underline the headings, and add padding around the cells to help everything look a little bit better.
+
+```
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid black;
+
+    &:not(:first-child) {
+        padding-left: 15px;
+    }
+}
+
+td {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+tr td {
+    border-bottom:1pt solid #C1C1C1;
+}
+```
+
+![](img/table_styling.png)
+
+
+## Acceptance Test
+After adding the trash icon, you should now be able to remove employees after one has been added.
+
+![](img/template_form_complete.png)
