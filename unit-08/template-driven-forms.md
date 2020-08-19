@@ -79,5 +79,78 @@ The `employee.ts` file (`Employee` interface), should now look like the image be
 
 ![](img/employee_updated.png)
 
+If your server is currently running, you may have noticed that you are getting errors saying that the newly add properties for an employee are missing in the `addEmployee()` function within the `timesheet.component.ts` file. Let's update the `addEmployee()` function to populate each of those day properties on a new employee with `0`.
+
+Replace the existing `addEmployee()` function in your `timesheet.component.ts` file with the code below.
+
+```
+addEmployee(): void {
+    if (this.employeeNameFC.value) {
+        this.employeeId++;
+
+        this.employees.push({
+            id: this.employeeId.toString(),
+            departmentId: this.department.id,
+            name: this.employeeNameFC.value,
+            payRate: Math.floor(Math.random() * 50) + 50,
+            monday: 0,
+            tuesday: 0,
+            wednesday: 0,
+            thursday: 0,
+            friday: 0,
+            saturday: 0,
+            sunday: 0
+        });
+
+        this.employeeNameFC.setValue('');
+    }
+}
+```
+
+![](img/add_employee_update.png)
+
+
+Next, let's create the body of the table where we will be inputing employee hours. Add the next bit of html directly below the `<thead>` element in the `timesheet.component.html` file.
+
+```
+<tbody>
+    <tr *ngFor="let employee of employees; let i = index">
+        <td>{{employee.name}}</td>
+        <td *ngFor="let day of weekdays">
+            <input type="number" [id]="day" [(ngModel)]="employee[day]" class="hours-input">
+        </td>
+    </tr>
+</tbody>
+```
+
+![](img/tbody_update.png)
+
+
+Notice in the `tbody` above, we are able to display a new row for every employee that exists. For each time that we click the plus button next to the Employee Name input, a new table row should be generated. With a new row being generated, the first `<td>` is displaying the name of the employee, and the next `<td>` is actually a `*ngFor` loop where we are looping through the `weekdays` variable to display a new input for each day of the week. 
+
+Because of the `*ngFor`, each day of the week gets its own `<input>` and with that, we are able to use `[(ngModel)]` to use two way binding to bind that day of week property from the employee to the current day's input. This is done through `[(ngModel)]="employee[day]"`. We are also using data binding with the `id` of the input to correlate the correct day to the correct input.
+
+Lastly for this snippet of code, we have a `class="hours-input"`, but no actual stying applied for that class in the `timesheet.component.scss` file. Let's add some for the `hours-input` class and also update the `hours` class as well.
+
+```
+.hours {
+    min-height: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hours-input {
+    max-width: 75px;
+    margin-left: 15px;
+    text-align: center;
+}
+```
+
+![](img/table_style_update.png)
+
+
+
 
 
