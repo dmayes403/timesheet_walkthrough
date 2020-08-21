@@ -62,12 +62,13 @@ The styling that we added centers the `<mat-card>` in the center of the page.
 At this point you should be able to restart your serve and navigate to the `./analytics` route by clicking on the `Analytics` text on the top navbar. Once there, you should be able to click on each of the three different tabs and see the focus change from one tab to the other as you click different departments.
 
 
-## Populate Each MatTab
+## Use Selector of Nested Component
 
-We are making good progress so far having setup our basic `MatTabGroup`. Now we want to populate each `MatTab` with data depending on which department has been clicked. To help us display content, we will first add some static data to the `analytics-table.component.ts` file. Above the `constructor`, add the following code.
+We are making good progress so far having setup our basic `MatTabGroup`. Now we want to populate each `MatTab` with data depending on which department has been clicked. To help us display content, we will first add two variables `employees` and `employeeData`. `employeeData` will be some static data that we will temporarily use in `analytics-table.component.ts` file. Above the `constructor`, add the following code.
 
 ```
-employees: Employee[] = [
+employees: Employee[] = [];
+employeeData: Employee[] = [
     {
         departmentId: '1',
         friday: 6,
@@ -123,7 +124,7 @@ employees: Employee[] = [
 ];
 ```
 
-Don't forget to also add the `Employee` interface import at the top of the file as well. `import { Employee } from 'src/app/interfaces/employee';`. Eventually this data will be replaced with data from a database, but this will give us some test data to begin with.
+Don't forget to also add the `Employee` interface import at the top of the file as well. `import { Employee } from 'src/app/interfaces/employee';`. Eventually this data will be replaced with data from a database, but this will give us some test data to work with.
 
 ![](img/static_data.png)
 
@@ -151,6 +152,24 @@ Next we want to add html to the `analytics.component.html` file so that we can s
 ![](img/nested_comp_start.png)
 
 Notice the highlighted changes in the image above. We added `<app-analytics-table></app-analytics-table>` into each of the three `<mat-tab>` elements. By placing the `app-analytics-table` selector (found in the `@Component` decorator) of the `AnalyticsTableComponent` as an element within the html of `AnalyticsComponent`, the `AnalyticsTableComponent` has now become a child (nested) component to the parent `AnalyticsComponent`.
+
+
+## Acceptance Test
+
+Your `./analytics` page should now look similar to the image below.
+
+![](img/nested_comp_start_disp.png)
+
+
+## Display a within each tab
+
+In the `analytics-table.component.ts` file paste the following `weekdays` variable directly above the `employees` variable that already exists in there. `weekdays: string[] = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];`. This will give us a variable that we can loop through with an `*ngFor` to display each day as a header in a table we will be creating.
+
+![](img/analytics_weekdays.png)
+
+To start on creating that table that will b
+
+
 
 
 
