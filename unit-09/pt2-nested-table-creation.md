@@ -25,7 +25,7 @@ To get this going, copy the following html into the `analytics-table.component.h
                 <td>{{employee.name}}</td>
                 <td *ngFor="let day of weekdays">{{employee[day]}}</td>
                 <td class="total-cell"></td>
-                <td>{{(employee.payRate | currency)}}/hr</td>
+                <td>{{employee.payRate}}/hr</td>
                 <td></td>
             </tr>
         </tbody>
@@ -33,7 +33,7 @@ To get this going, copy the following html into the `analytics-table.component.h
 </div>
 ```
 
-![](img/analytics_table_html_start.png)
+![](img/analytics_table_start_html.png)
 
 As you're looking at the code, it should look pretty familiar to other code that we've written, and that's because it is. This is resembling the code that we used in the `TimesheeComponent`, execpt this time we won't be using inputs, we'll just be displaying data that has already been created.
 
@@ -87,6 +87,14 @@ ngOnInit(): void {
 ![](img/parent_property_binding.png)
 
 ![](img/filter_employees.png)
+
+
+## Acceptance Test
+
+Navigate to the `./analytics` route and the page should look like the image below when the `Customer Success` tab is selected.
+
+![](img/customer_success_tab.png)
+
 
 
 
