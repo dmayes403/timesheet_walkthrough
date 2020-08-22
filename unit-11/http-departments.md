@@ -1,4 +1,4 @@
-# Using HTTP
+# Using HttpClientModule
 
 ## Introduction
 
