@@ -37,7 +37,7 @@ getDeparments(): Observable<Department[]> {
 ![](img/http_use.png)
 
 
-The `getDepartments()` function that we just created returns an `Observable` containing a list of `Deparments`. To make the request to get data, we have to call `this.http` which is the injected `HttpClient` in the constructor, and we call the `get()` method on that module to define it as a `get` request rather than a `post` or `delete` request. We also pass in `https://hr-timesheet-test.firebaseio.com/departments.json` to the `get()` request to define the location that we are retrieving data from.
+The `getDepartments()` function that we just created returns an `Observable` containing a list of `Deparments`. To make the request to get data, we have to reference `this.http` which is the injected `HttpClient` in the constructor, and we call the `get()` method on that module to define it as a `get` request rather than a `post` or `delete` request. We also pass in `https://hr-timesheet-test.firebaseio.com/departments.json` to the `get()` request to define the location that we are retrieving data from.
 
 To see this in action, let's update our `departments.component.ts` file to retrieve departments using this new `getDepartments()` function.
 
@@ -50,3 +50,10 @@ this.departmentsService.getDeparments().subscribe(departments => {
 ```
 
 ![](img/departments_subscription.png)
+
+Because the `getDepartments()` function within the `DepartmentsService` returns an `Observable`, we have to `.subscribe()` to that observable within the `departments.component.ts` file. By subscribing to the observable, we are able to unwrap the raw data which is the list of departments.
+
+
+## Acceptance Test
+
+Go to the `./departments` page and make sure that you are still able to see the list of departments after switching the static data for an `http` request.
