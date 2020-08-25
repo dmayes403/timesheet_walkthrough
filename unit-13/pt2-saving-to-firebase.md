@@ -3,7 +3,7 @@
 
 Now that we have Firebase configured into our application, let's work on saving data to our database.
 
-The first thing that we want to do is be able to submit the hours that have been entered for each employee in the `TimesheetComponent`. Go to the `timesheet.component.html` file and past the following code directly below the `</table>`.
+The first thing that we want to do is be able to submit the hours that have been entered for each employee in the `TimesheetComponent`. Go to the `timesheet.component.html` file and paste the following code directly below the `</table>`.
 
 `<button mat-raised-button color="primary" class="submit" (click)="submit()">Submit</button>`
 
@@ -22,7 +22,7 @@ Also add the following style to the `timesheet.compnent.scss` file
 ![](img/submit_ui.png)
 
 
-Soon our `./timesheet` route will look like the image above. With the `<button>` html that we added, there is a `(click)` event that is trying to call a `submit()` function that doesn't yet exist, let's get to that now. 
+Soon our `./timesheet` route will look like the image above. With the `<button>` HTML that we added, there is a `(click)` event that is trying to call a `submit()` function that doesn't exist yet, let's get to that now. 
 
 When we click the `submit` button, we want employee data to be saved to Firebase. Because the future saving and retrieving of firebase data will revolve around employee data, let's create an `EmployeeService`. Use the command `ng g s services/employee` to generate a new service within the `services` folder. 
 
@@ -45,7 +45,7 @@ To explain the method above in a little more detail, the `saveEmployeeHours(empl
 
 At this point you may be thinking "where is the employee-hours collection, we haven't created one yet", and that is correct, we haven't created that collection, but if that collection doesn't exist and we try and save to it, Firebase automatically will create it for us.
 
-Now that we have created a save method in our service, let's also create a method in our `timesheet.component.ts` file that can call these methods in our service once the employee clicks the `submit` button.
+Now that we have created a save method in our service, let's also create a method in our `timesheet.component.ts` file that can call this method in our service once the employee clicks the `submit` button.
 
 First, inject the `EmployeeService` and `Router` into the `timesheet.component.ts` file.
 
