@@ -47,7 +47,7 @@ Now that we have set the `departments` variable within the `DepartmentsComponent
 
 Run `ng serve` and see if your app runs without errors.
 
-At this point you should see multiple errors logging in your terminal. A couple of them should relate to `mat-card` and `mat-list`. That is because both `mat-card` and `mat-list` are Angular Material compnents that require imports into our `material.module.ts` module.
+At this point you should see multiple errors logging in your terminal. A couple of them should relate to `mat-card` and `mat-list`. That is because both `mat-card` and `mat-list` are Angular Material components that require imports into our `MaterialModule` module.
 
 Import both `https://material.angular.io/components/card/api` and `https://material.angular.io/components/list/api` into the `material.module.ts` file in the same way that we did the imports for the `mat-toolbar`.
 
@@ -57,7 +57,7 @@ Your `MaterialModule` should look like the image below.
 
 At this point you can restart your server with `ng serve` and you shouldn't see any errors.
 
-There's some styling that we're missing to make it look like the original image at the top of this page. Paste the code below into your `departments.component.scss` file.
+There's some styling that we're missing to make it look like the original image at the top of this page. Paste the code below into the `departments.component.scss` file.
 
 ```
 mat-card {
