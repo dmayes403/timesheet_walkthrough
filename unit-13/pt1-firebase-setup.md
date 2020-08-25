@@ -32,7 +32,7 @@ export const environment = {
 };
 ```
 
-To load these properties to your Angular app, you will need to add the `AngularFireModule` to the `imports` array of your app module, call its `initializeApp()` method, and pass in the firebase properties. Along with add that code, we will also import the `AngularFirestoreModule as well.
+To load these properties to your Angular app, you will need to add the `AngularFireModule` to the `imports` array of your app module, call its `initializeApp()` method, and pass in the firebase properties. Along with adding that code, we will also import the `AngularFirestoreModule`.
 
 Add these to the imports at the top of the `app.module.ts` file
 
