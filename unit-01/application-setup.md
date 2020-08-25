@@ -20,7 +20,7 @@ At the end of this unit, you should be able to answer the following questions:
 
 Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.
 
-## Create a new Angular app
+## Create a New Angular App
 
 Let's get started with our new application, use the following command to start a new application from scratch.
 
@@ -84,7 +84,7 @@ By going through this Angular Material setup, you should now have new dependenci
 
 ![package.json](img/angular_material.png)
 
-## Adjust and create modules
+## Adjust and Create Modules
 
 Aside from our root `app.module.ts` file, we want to keep all of our other current and future modules in a separate `modules` folder. This will help with organization throughout this application.
 
