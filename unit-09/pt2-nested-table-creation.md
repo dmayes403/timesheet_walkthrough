@@ -35,7 +35,7 @@ To get this going, copy the following html into the `analytics-table.component.h
 
 ![](img/analytics_table_start_html.png)
 
-As you're looking at the code, it should look pretty familiar to other code that we've written, and that's because it is. This is resembling the code that we used in the `TimesheeComponent`, execpt this time we won't be using inputs, we'll just be displaying data that has already been created.
+As you're looking at the code, it should look pretty familiar to other code that we've written, and that's because it is. This is resembling the code that we used in the `TimesheetComponent`, except this time we won't be using inputs, we'll just be displaying data that has already been created.
 
 ## Acceptance Test
 
@@ -44,11 +44,11 @@ At this point you should be able to go to the `./analytics` route and see the sa
 ![](img/analytics_table_start_display.png)
 
 
-## Diplaying the correct data
+## Displaying the Correct Data
 
 At this point you may be seeing that we have an `employees: Employee[]` variable and we're looping through that variable within the `analytics-table.component.html` file, but how do we get that populated correctly according to the current department tab that we're on?
 
-This is where the combination of property binding and the `@Input()` decorator come into play. We have three piece of code that we need to add next to display the correct employees. Do it in this order following order. See the images after the three steps to make sure you have everything correct.
+This is where the combination of property binding and the `@Input()` decorator come into play. We have three pieces of code that we need to add next to display the correct employees. Do it in the order shown below. See the images after the three steps to make sure you have everything correct.
 
 1. Add an `Input()` decorator in the `analytics-table.component.ts` file to create a variable that will accept the current department id.
 
