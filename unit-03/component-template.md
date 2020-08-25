@@ -59,7 +59,7 @@ We now have access to `mat-toolbar`, `mat-button`, and `mat-icon` components. Pa
 </mat-toolbar>
 ```
 
-We also need to style this component so that it fits well in our component. Paste the below code into your `top-navbar.component.scss` file
+We also need to style this component so that it fits well. Paste the below code into your `top-navbar.component.scss` file
 
 ```
 .material-icons {
