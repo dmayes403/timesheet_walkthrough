@@ -4,7 +4,7 @@
 During the previous exercise, we learned about reactive form controls using `[formControl]`. Today we will learn about template driven forms which is a separate way to track form inputs.
 
 ## Objectives
-Our current objective will make it so that when the user navigates to the `./timesheet` route, the user is presented with a table that displays the days of the week along with inputs for each day per employee to enter in the amount of hours that each employee worked per day. We will also include a column on the right side of the table that totals employees hours worked during that week. Additionally we will also provide a way to remove an employee.
+Our current objective will make it so that when the user navigates to the `./timesheet` route, the user is presented with a table that displays the days of the week along with inputs for each day per employee to enter in the amount of hours that each employee worked. We will also include a column on the right side of the table that totals employees hours worked during that week. Additionally we will also provide a way to remove an employee.
 
 ![](img/template_driven.png)
 
@@ -33,7 +33,7 @@ Next, add the following HTML below the current `mat-card` that exists in the `ti
 
 ![](img/time_table.png)
 
-The above code will create a `mat-card` with the beginning layout for a `table`. It includes a `thead` to show all of the column headings that we will want to show including, `Name`, `Monday`-`Sunday`, `Total Hours`, and a blank heading that will eventually be the column displaying trash can icons to remove users. Notice the `*ngFor="let day of weekdays"` in the second `th` element. This is looping through the `weekdays` variable from our `timesheet.component.ts` file and displaying each weekday.
+The above code will create a `mat-card` with the beginning layout for a `<table>`. It includes a `<thead>` to show all of the column headings that we will want to show including, `Name`, `Monday`-`Sunday`, `Total Hours`, and a blank heading that will eventually be the column displaying trash can icons to remove users. Notice the `*ngFor="let day of weekdays"` in the second `<th>` element. This is looping through the `weekdays` variable from our `timesheet.component.ts` file and displaying each weekday.
 
 To add some separation between the two cards that exist in the `TimesheetComponent` and to make sure that the name input takes up more space, add the scss below to the `timesheet.component.scss` file.
 
@@ -110,7 +110,7 @@ addEmployee(): void {
 ![](img/add_employee_update.png)
 
 
-Next, let's create the body of the table where we will be inputing employee hours. Add the next bit of html directly below the `<thead>` element in the `timesheet.component.html` file.
+Next, let's create the body of the table where we will be inputing employee hours. Add the next bit of HTML directly below the `<thead>` element in the `timesheet.component.html` file.
 
 ```
 <tbody>
@@ -126,11 +126,11 @@ Next, let's create the body of the table where we will be inputing employee hour
 ![](img/tbody_update.png)
 
 
-Notice in the `tbody` above, we are able to display a new row for every employee that exists. For each time that we click the plus button next to the Employee Name input, a new table row should be generated. With a new row being generated, the first `<td>` is displaying the name of the employee, and the next `<td>` is actually a `*ngFor` loop where we are looping through the `weekdays` variable to display a new input for each day of the week. 
+Notice in the `<tbody>` above, we are able to display a new row for every employee that exists. For each time that we click the plus button next to the `Employee Name` input, a new table row should be generated. With a new row being generated, the first `<td>` is displaying the name of the employee, and the next `<td>` is actually a `*ngFor` loop where we are looping through the `weekdays` variable to display a new input for each day of the week. 
 
 Because of the `*ngFor`, each day of the week gets its own `<input>` and with that, we are able to use `[(ngModel)]` to use two way binding to bind that day of week property from the employee to the current day's input. This is done through `[(ngModel)]="employee[day]"`. We are also using data binding with the `id` of the input to correlate the correct day to the correct input.
 
-Lastly for this snippet of code, we have a `class="hours-input"`, but no actual stying applied for that class in the `timesheet.component.scss` file. Let's add some for the `hours-input` class and also update the `hours` class as well.
+Lastly for this snippet of code, we have a `class="hours-input"`, but no actual styling applied for that class in the `timesheet.component.scss` file. Let's add some for the `hours-input` class and also update the `hours` class as well.
 
 ```
 .hours {
