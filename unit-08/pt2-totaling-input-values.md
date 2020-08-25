@@ -5,7 +5,7 @@ In this section we will be creating a function that allows us to sum the total h
 
 ## Totaling Hours
 
-First, let's provide a way to total all of the hours entered per employee. In the `timesheet.component.ts` file added the following code below the `nameValidator()` custom validator that we previously created.
+First, let's provide a way to total all of the hours entered per employee. In the `timesheet.component.ts` file, add the following code below the `nameValidator()` custom validator that we previously created.
 
 ```
 getTotalHours(employee: Employee): number {
@@ -55,11 +55,11 @@ deleteEmployee(index: number): void {
 ![](img/delete_employee.png)
 
 
-The `deleteEmployee(index: number)` function accepts an `index` parameter which is of type `number`. With the passed in parameter we will remove the employee from the list of employees (`employees` variable), using `splice`.
+The `deleteEmployee(index: number)` function accepts an `index` parameter which is of type `number`. With the passed in parameter we will remove the employee from the list of employees (`employees` variable), using `splice()`.
 
 To make this function properly, let's add a trash can icon in a new column furthest to the right, so that when the user clicks the icon, the employee is removed.
 
-Add the following html directly below the last existing `<td>` element in the `timesheet.component.html` file.
+Add the following HTML directly below the last existing `<td>` element in the `timesheet.component.html` file.
 
 ```
 <td>
