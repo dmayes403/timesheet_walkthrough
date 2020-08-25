@@ -1,7 +1,7 @@
 # Application Setup
 
 ## Application Introduction
-Over the next several days we will be creating an application from scratch that will resemble something that a human resource employee could use to enter the hours for each employee who is working under a certain department. This application will consist of three main pages: A department selection page, a timesheet entry page, and an analysis page.
+Over the next several days we will be creating an application from scratch that will resemble something that a human resource employee could use to enter the hours for each employee who is working under a certain department. This application will consist of three main pages: a department selection page, a timesheet entry page, and an analysis page.
 
 ![Department Selection](img/departments_final.png)
 ![Timesheet Entry](img/timesheet_final.png)
@@ -22,6 +22,8 @@ Angular is a platform and framework for building single-page client applications
 
 ## Create a new Angular app
 
+Let's get started with our new application, use the following command to start a new application from scratch.
+
 ```
 ng new hr-timesheet
 ```
@@ -40,7 +42,7 @@ Which stylesheet format would you like to use? (Use arrow keys)
   Stylus [ http://stylus-lang.com  
 ```
 
-This will create a directory named hr-timesheet, generate all of the app files and place them in there, and download all of the dependencies specified by Angular CLI. You're free to install more as your project needs them. The above command may take a minute or more, depending on your environment and internet connection speed.
+This will create a directory named hr-timesheet, generate all of the app files, and download all of the dependencies specified by the Angular CLI. You're free to install more as your project needs them. The above command may take a minute or more depending on your environment and internet connection speed.
 
 ## Create additional directories
 
@@ -96,8 +98,10 @@ The last thing that we will be doing during today's walkthrough of our HR Timesh
 ng g module modules/material
 ```
 
-In the command above, the `g` stands for generate. By using that command, we have created a custom module called `material` and stored it within the `modules` directory. The only other step that we want to do here is pull the `material` module out of the nested directory that was also created with that module that module file itself is on the same level as the `AppRoutingModule`. After moving your `material` module out of the nested directory, your current directory/file structure should look like the image below.
+In the command above, the `g` stands for generate. By using that command, we have created a custom module called `material` and stored it within the `modules` directory. The only other step that we want to do here is pull the `material` module out of the nested directory that the CLI command placed it in so that it's now a file by itself on the same level as the `AppRoutingModule`. After moving your `material` module out of the nested directory, your current directory/file structure should look like the image below.
 
 ![Module Structure](img/structure_w_material.png)
+
+## Acceptance Test
 
 Run the command `ng serve` to ensure that your project will start without errors.
