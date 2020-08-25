@@ -1,8 +1,5 @@
 # Component Creation
 
-## Objectives
-
-
 
 ## Introduction
 
