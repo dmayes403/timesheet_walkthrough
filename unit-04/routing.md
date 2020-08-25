@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The end goal of our application is to have three different viewable pages that we can navigate between. In order for us to do that in the form of a SPA (single page application), Angular provides a RouterModule which allows us view different components as a single page depending on which route we are navigating too. When we initialized our application, we opted to include an `AppRoutingModule`, which you can see in the `app-routing.module.ts` file. This is where we will determine our routes that are attached to certain paths (urls), and which component will be loaded per route.
+The end goal of our application is to have three different viewable pages that we can navigate between. In order for us to do that in the form of a SPA (single page application), Angular provides a `RouterModule` which allows us to view different components as a single page depending on which route we are navigating to. When we initialized our application, we opted to include an `AppRoutingModule`, which you can see in the `app-routing.module.ts` file. This is where we will determine our routes that are attached to certain paths (urls), and which component will be loaded per route.
 
 ## Update Routes Array
 
