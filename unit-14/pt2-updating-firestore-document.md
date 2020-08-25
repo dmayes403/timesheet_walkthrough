@@ -36,7 +36,7 @@ submit(): void {
 ![](img/submit_update.png)
 
 
-As you can see in the code above, we've  updated the logic depending on if the employee that are currently looping through has an id or not. If the employee does have an id, then we're calling the `updateEmployeeHours()` method, if the employee doesn't have an id, then we're calling the `saveEmployeeHours()` method. This logic will help us determine when employee should be updated and when it should be saved as a new record.
+As you can see in the code above, we've  updated the logic depending on if the employee that are currently looping through has an id or not. If the employee does have an id, then we're calling the `updateEmployeeHours()` method, if the employee doesn't have an id, then we're calling the `saveEmployeeHours()` method. This logic will help us determine when an employee should be updated and when it should be saved as a new record.
 
 
 ## Acceptance Test
