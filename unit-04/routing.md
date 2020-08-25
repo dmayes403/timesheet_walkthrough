@@ -21,7 +21,7 @@ const routes: Routes = [
 
 ![](img/routing_pathes.png)
 
-Remember, in the code that we just pasted, `{ path: '',   redirectTo: 'departments', pathMatch: 'full' }` is saying that when we first come to the root path of localhost:4200, we want the user to be redirected to the `departments` path so that the `DepartmentsComponent` will be displayed. All of the other paths will be loaded as we direct the user to them by other ways.
+Remember, in the code that we just pasted, `{ path: '',   redirectTo: 'departments', pathMatch: 'full' }` is saying that when we first come to the root path of `localhost:4200`, we want the user to be redirected to the `departments` path so that the `DepartmentsComponent` will be displayed. All of the other paths will be loaded as we direct the user to them by other ways.
 
 To make it so that the router works, we need to add `<router-outlet style="height: 100%;"></router-outlet>` to the `app.component.html` file.
 
@@ -31,11 +31,11 @@ Your `app.component.html` file should look like the image below.
 
 ## Acceptance Test
 
-Start your app up using `ng serve`, go to localhost:4200. You should see that the router redirects you to `localhost:4200/departments` and you should see the basic view as the image below where the main space just shows `departments works!`
+Start your app up using `ng serve`, go to `localhost:4200`. You should see that the router redirects you to `localhost:4200/departments` and you should see the basic view as the image below where the main space just shows `departments works!`
 
 ![](img/empty_departments.png)
 
-## One more thing to add
+## One More Thing to Add
 
 To be able to see that we are routing between multiple routes, let's add a little bit of code to our HTML so that we can route between the departments page and the analytics page. If you go to the `top-navbar.html` file, let's add a `routerLink`. When a `routerLink` directive is applied to an element in a template, it makes that element a link that initiates navigation to a route.
 
